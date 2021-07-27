@@ -21,8 +21,19 @@ namespace Distribution_Warehouse.Repo
     }
 
 
+
     class Warehouse
     {
+
+        public Dictionary<ProductOptions, Tuple<int, int>> productWithCharacteristics = new Dictionary<ProductOptions, Tuple<int, int>>()
+        {
+            {ProductOptions.Apples, Tuple.Create(50,250)},
+            {ProductOptions.Potatoes, Tuple.Create(15,25)},
+            {ProductOptions.Onions, Tuple.Create(15,25)},
+            {ProductOptions.Peaches, Tuple.Create(30,60)},
+            {ProductOptions.Oranges, Tuple.Create(15,25)},
+            {ProductOptions.Crackers, Tuple.Create(100,500)},
+        };
         private List<Product> products;
 
         public Warehouse()
@@ -58,13 +69,16 @@ namespace Distribution_Warehouse.Repo
                 //so we can have elements that can be deleted
                 DateTime entryDate = DateTime.Now.AddMonths(-2).AddDays(-entry_date_days);
                 DateTime expirationDate = entryDate.AddMonths(6);
-                
+
                 //now we check for the options
+
+                int random_start = productWithCharacteristics[option].Item1;
+                int random_end = productWithCharacteristics[option].Item2;
+                int quantity = random.Next(random_start, random_end);
 
 
                 if(option.Equals(ProductOptions.Apples))
                 {
-                    int quantity = random.Next(50, 250);
                     int nutritional_value = random.Next(0, 100);
                     SimpleFruitParameters simpleFruitParameters = new SimpleFruitParameters();
                     simpleFruitParameters.entryDate = entryDate;
@@ -79,7 +93,6 @@ namespace Distribution_Warehouse.Repo
                 {
                     int nutritional_value = random.Next(0, 100);
                     string producer = "default";
-                    int quantity = random.Next(15, 25);
                     SimpleVegetableParameters simpleVegetableParameters = new SimpleVegetableParameters();
                     simpleVegetableParameters.entryDate = entryDate;
                     simpleVegetableParameters.expirationDate = expirationDate;
@@ -93,7 +106,6 @@ namespace Distribution_Warehouse.Repo
                 {
                     int nutritional_value = random.Next(0, 100);
                     string producer = "default";
-                    int quantity = random.Next(15, 25);
                     SimpleVegetableParameters simpleVegetableParameters = new SimpleVegetableParameters();
                     simpleVegetableParameters.entryDate = entryDate;
                     simpleVegetableParameters.expirationDate = expirationDate;
@@ -105,7 +117,6 @@ namespace Distribution_Warehouse.Repo
                 else
                      if (option.Equals(ProductOptions.Peaches))
                 {
-                    int quantity = random.Next(30, 60);
                     int nutritional_value = random.Next(0, 100);
                     SimpleFruitParameters simpleFruitParameters = new SimpleFruitParameters();
                     simpleFruitParameters.entryDate = entryDate;
@@ -118,7 +129,6 @@ namespace Distribution_Warehouse.Repo
                 else
                      if (option.Equals(ProductOptions.Oranges))
                 {
-                    int quantity = random.Next(15, 25);
                     int nutritional_value = random.Next(0, 100);
                     SimpleFruitParameters simpleFruitParameters = new SimpleFruitParameters();
                     simpleFruitParameters.entryDate = entryDate;
@@ -131,7 +141,6 @@ namespace Distribution_Warehouse.Repo
                 else
                      if (option.Equals(ProductOptions.Crackers))
                 {
-                    int quantity = random.Next(100,500);
                     int nutritional_value = random.Next(0, 100);
                     CrackersParameters crackerParameters = new CrackersParameters();
                     crackerParameters.entryDate = entryDate;
