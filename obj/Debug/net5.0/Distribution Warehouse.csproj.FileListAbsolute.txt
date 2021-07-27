@@ -1,0 +1,16 @@
+C:\Users\PC\source\repos\Distribution Warehouse\bin\Debug\net5.0\Distribution Warehouse.exe
+C:\Users\PC\source\repos\Distribution Warehouse\bin\Debug\net5.0\Distribution Warehouse.deps.json
+C:\Users\PC\source\repos\Distribution Warehouse\bin\Debug\net5.0\Distribution Warehouse.runtimeconfig.json
+C:\Users\PC\source\repos\Distribution Warehouse\bin\Debug\net5.0\Distribution Warehouse.runtimeconfig.dev.json
+C:\Users\PC\source\repos\Distribution Warehouse\bin\Debug\net5.0\Distribution Warehouse.dll
+C:\Users\PC\source\repos\Distribution Warehouse\bin\Debug\net5.0\ref\Distribution Warehouse.dll
+C:\Users\PC\source\repos\Distribution Warehouse\bin\Debug\net5.0\Distribution Warehouse.pdb
+C:\Users\PC\source\repos\Distribution Warehouse\obj\Debug\net5.0\Distribution Warehouse.csprojAssemblyReference.cache
+C:\Users\PC\source\repos\Distribution Warehouse\obj\Debug\net5.0\Distribution Warehouse.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\source\repos\Distribution Warehouse\obj\Debug\net5.0\Distribution Warehouse.AssemblyInfoInputs.cache
+C:\Users\PC\source\repos\Distribution Warehouse\obj\Debug\net5.0\Distribution Warehouse.AssemblyInfo.cs
+C:\Users\PC\source\repos\Distribution Warehouse\obj\Debug\net5.0\Distribution Warehouse.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\Distribution Warehouse\obj\Debug\net5.0\Distribution Warehouse.dll
+C:\Users\PC\source\repos\Distribution Warehouse\obj\Debug\net5.0\ref\Distribution Warehouse.dll
+C:\Users\PC\source\repos\Distribution Warehouse\obj\Debug\net5.0\Distribution Warehouse.pdb
+C:\Users\PC\source\repos\Distribution Warehouse\obj\Debug\net5.0\Distribution Warehouse.genruntimeconfig.cache

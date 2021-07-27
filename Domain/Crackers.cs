@@ -12,6 +12,7 @@ namespace Distribution_Warehouse.Domain
         public DateTime entryDate;
         public DateTime expirationDate;
     }
+    [Serializable]
     class Crackers : Product
     {
         public Crackers(CrackersParameters crackersParameters)
@@ -29,6 +30,16 @@ namespace Distribution_Warehouse.Domain
         {
             float price = Quantity * PricePerUnit;
             return price;
+        }
+
+
+        public override string ToString()
+        {
+            float price = ComputePrice();
+            float weight = this.ComputeWeight();
+            string message = "Crackers: " +this.Quantity + " " + this.MeasurableUnitType + " (" + weight + " kg), " +
+                "Unit price: " + this.PricePerUnit + " total price: " + price.ToString();
+            return message;
         }
 
     }

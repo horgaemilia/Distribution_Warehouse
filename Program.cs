@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Distribution_Warehouse.Repo;
+using System;
 
 namespace Distribution_Warehouse
 {
@@ -6,7 +7,16 @@ namespace Distribution_Warehouse
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Warehouse warehouse = new Warehouse();
+            warehouse.PrintElements();
+            // warehouse.writeElementsToFile();
+            warehouse.ReadElementsFromFile();
+            Console.WriteLine();
+            Console.WriteLine("old stuff");
+            Console.WriteLine();
+
+            warehouse.PrintElements();
+            Console.WriteLine("here");
         }
     }
 }

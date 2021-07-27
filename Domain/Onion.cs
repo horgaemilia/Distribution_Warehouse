@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Distribution_Warehouse.Domain
 {
+    [Serializable]
     class Onion: Vegetable
     {
         public Onion(SimpleVegetableParameters onionParameters)
@@ -20,5 +21,14 @@ namespace Distribution_Warehouse.Domain
             Producer = onionParameters.producer;
             PricePerUnit = 2.5F;
         }
+
+        public override string ToString()
+        {
+            string message = "Onion :";
+            message += base.ToString();
+            return message;
+        }
     }
+
+
 }

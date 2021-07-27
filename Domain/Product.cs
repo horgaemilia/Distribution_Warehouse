@@ -19,15 +19,6 @@ namespace Distribution_Warehouse.Domain
         Pack
     }
 
-    public enum Types
-    {
-        Apples,
-        Potatoes,
-        Onions,
-        Peaches,
-        Oranges,
-        Crackers
-    }
 
     public struct ProductParameters
     {
@@ -40,6 +31,7 @@ namespace Distribution_Warehouse.Domain
     }
 
 
+    [Serializable]
     abstract class Product
     {
         public MeasurableUnitTypes MeasurableUnitType { get; set; }
@@ -77,7 +69,7 @@ namespace Distribution_Warehouse.Domain
 
         public bool IsExpired()
         {
-            return DateTime.Compare(ExpirationDate, DateTime.Now) >= 0;
+            return DateTime.Compare(ExpirationDate, DateTime.Now) <= 0;
         }
 
         public abstract float ComputePrice();

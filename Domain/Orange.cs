@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Distribution_Warehouse.Domain
 {
+    [Serializable]
     class Orange:Fruit
     {
         public Orange(SimpleFruitParameters orangeParameters)
@@ -18,6 +19,13 @@ namespace Distribution_Warehouse.Domain
             NutritionalQuality = orangeParameters.nutritionalValue;
             Quantity = orangeParameters.quantity;
             PricePerUnit = 13;
+        }
+
+        public override string ToString()
+        {
+            string message = "Orange :";
+            message += base.ToString();
+            return message;
         }
     }
 }

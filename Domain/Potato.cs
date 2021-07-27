@@ -14,6 +14,7 @@ namespace Distribution_Warehouse.Domain
         public DateTime entryDate;
         public DateTime expirationDate;
     }
+    [Serializable]
     class Potato:Vegetable
     {
         public Potato(SimpleVegetableParameters potatoParameters)
@@ -27,6 +28,13 @@ namespace Distribution_Warehouse.Domain
             Quantity = potatoParameters.quantity;
             Producer = potatoParameters.producer;
             PricePerUnit = 15;
+        }
+
+        public override string ToString()
+        {
+            string message = "Potato :";
+            message += base.ToString();
+            return message;
         }
     }
 }

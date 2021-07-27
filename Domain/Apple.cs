@@ -13,6 +13,7 @@ namespace Distribution_Warehouse.Domain
         public DateTime entryDate;
         public DateTime expirationDate;
         }
+    [Serializable]
     class Apple:Fruit
     {
         public Apple(SimpleFruitParameters appleParameters)
@@ -25,6 +26,13 @@ namespace Distribution_Warehouse.Domain
             NutritionalQuality = appleParameters.nutritionalValue;
             Quantity = appleParameters.quantity;
             PricePerUnit = 4;
+        }
+
+        public override string ToString()
+        {
+            string message = "Apple :";
+            message +=  base.ToString();
+            return message;
         }
 
     }
